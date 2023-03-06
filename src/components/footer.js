@@ -3,7 +3,7 @@ import Title from './title';
 function Footer() {
   return (
     <>
-      <div className="flex flex-col mb-10 mx-auto">
+      <div id="contact" className="flex flex-col mb-10 mx-auto">
         <div className="flex justify-center items-center">
           <form
             action="https://getform.io/f/52b794d6-9193-4ae4-a1a5-a09664ebb995"

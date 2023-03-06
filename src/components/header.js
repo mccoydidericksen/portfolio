@@ -3,8 +3,9 @@ import Nav from "./navigation";
 function Header() {
   return (
     <>
+    <div id="home"></div>
     <Nav />
-    <div className="flex items-center justify-center flex-col text-center pt-20 pb-6">
+    <div className="flex items-center justify-center flex-col text-center pt-20 pb-4">
       <h1 className="text-4xl md:text-7xl text-white mb-1 md:mb-3 font-bold">
         McCoy Didericksen
       </h1>
@@ -25,6 +26,7 @@ function Header() {
         developer/engineer who is driven, detail-oriented, and passionate about
         delivering exceptional results, let's connect!
       </p>
+      
     </div>
     </>
   );

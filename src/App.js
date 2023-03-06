@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import Header from './components/header';
 import Project from './components/project';
 import Timeline from './components/timeline';
