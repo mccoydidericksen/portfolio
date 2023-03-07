@@ -1,6 +1,32 @@
+import { useState } from 'react';
 import Title from './title';
 
 function Footer() {
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+  const [submitMessage, setSubmitMessage] = useState('Please fill out all fields.');
+  const [valid, setValid] = useState(false);
+  const isValid = () => {
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      setSubmitMessage('Please enter a valid email address.');
+      setValid(false);
+      return false;
+    }
+    if (name === '') {
+      setSubmitMessage('Please enter your name.');
+      setValid(false);
+      return false;
+    }
+    if (message === '') {
+      setSubmitMessage('Please enter a message.');
+      setValid(false);
+      return false;
+    }
+    setSubmitMessage('');
+    setValid(true);
+    return true;
+  };
   return (
     <>
       <div id="contact" className="flex flex-col mb-10 mx-auto">
@@ -12,6 +38,7 @@ function Footer() {
           >
             <Title>Contact</Title>
             <input
+              onChange={(e) => {setName(e.target.value); isValid();}}
               id="name"
               type="text"
               name="name"
@@ -19,6 +46,7 @@ function Footer() {
               className="p-2 bg-transparent border-2 rounded-md focus:outline-none"
             />
             <input
+              onChange={(e) => {setEmail(e.target.value); isValid();}}
               id="email"
               type="text"
               name="email"
@@ -26,15 +54,20 @@ function Footer() {
               className="my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none"
             />
             <textarea
+              onChange={(e) => {setMessage(e.target.value); isValid(); }}
               id="message"
               name="message"
               placeholder="Message"
               rows="10"
               className="p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none"
             />
+            <p className="pb-2">
+              {submitMessage}
+            </p>
             <button
               type="submit"
-              className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-yellow-500 to-pink-500 drop-shadow-md hover:stroke-white"
+              className={valid ? "text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-yellow-500 to-pink-500 drop-shadow-md hover:stroke-white": "text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-yellow-500 to-pink-500 drop-shadow-md hover:stroke-white opacity-50"}
+              disabled={valid}
               onClick={() => {
                document.getElementById("name").value = "";
                 document.getElementById("email").value = "";
