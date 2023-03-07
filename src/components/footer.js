@@ -8,7 +8,7 @@ function Footer() {
   const [submitMessage, setSubmitMessage] = useState('Please fill out all fields.');
   const [valid, setValid] = useState(false);
   const isValid = () => {
-    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    if (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       setSubmitMessage('Please enter a valid email address.');
       setValid(false);
       return false;
