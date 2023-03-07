@@ -4,7 +4,7 @@ function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const dropdownStyle = `items-center justify-between w-full md:flex md:w-auto md:order-1`;
   return (
-    <nav className="px-2 sm:px-4 py-2.5 bg-gray-800 fixed w-full z-20 top-0 left-0 border-b border-gray-200 border-gray-600">
+    <nav className="px-2 sm:px-4 py-2.5 bg-stone-800 fixed w-full z-20 top-0 left-0 border-b border-gray-600">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <a
           href="https://www.linkedin.com/in/mccoydid/"
@@ -36,7 +36,7 @@ function Nav() {
           </a>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
+            className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 text-stone-400 hover:bg-gray-700 focus:ring-gray-600"
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -58,11 +58,11 @@ function Nav() {
           className={menuOpen ? dropdownStyle : `${dropdownStyle} hidden`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white bg-gray-800 md:bg-gray-900 border-gray-700">
+          <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-stone-900 border-gray-700">
             <li>
               <a
                 href="#home"
-                className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:hover:text-white text-gray-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
+                className="block py-2 pl-3 pr-4 text- rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:hover:text-white text-stone-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
                 onClick={() => setMenuOpen(false)}
               >
                 Projects
@@ -71,7 +71,7 @@ function Nav() {
             <li>
               <a
                 href="#timeline"
-                className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:hover:text-white text-gray-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
+                className="block py-2 pl-3 pr-4 text- rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:hover:text-white text-stone-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
                 onClick={() => setMenuOpen(false)}
               >
                 Timeline
@@ -81,7 +81,7 @@ function Nav() {
             <li>
               <a
                 href="#contact"
-                className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:hover:text-white text-gray-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
+                className="block py-2 pl-3 pr-4 text- rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:hover:text-white text-stone-400 hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
                 onClick={() => setMenuOpen(false)}
               >
                 Contact
