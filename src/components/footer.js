@@ -67,7 +67,7 @@ function Footer() {
             <button
               type="submit"
               className={valid ? "text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-yellow-500 to-pink-500 drop-shadow-md hover:stroke-white": "text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-r from-yellow-500 to-pink-500 drop-shadow-md hover:stroke-white opacity-50"}
-              disabled={valid}
+              disabled={!valid}
               onClick={() => {
                document.getElementById("name").value = "";
                 document.getElementById("email").value = "";
